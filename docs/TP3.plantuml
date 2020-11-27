@@ -113,17 +113,17 @@ title __JAVA's Class Diagram__\n
 
   
 
-  PizzaCheeseStyleBrest -up-|> Pizza
-  PizzaCheeseStyleStrasbourg -up-|> Pizza
-  PizzaFactoryBrest -up-|> PizzaFactory
-  PizzaFactoryStrasbourg -up-|> PizzaFactory
-  PizzaGrecqueStyleBrest -up-|> Pizza
-  PizzaGrecqueStyleStrasbourg -up-|> Pizza
-  PizzaPoivronStyleBrest -up-|> Pizza
-  PizzaPoivronStyleStrasbourg -up-|> Pizza
+  Pizza <|-- PizzaCheeseStyleBrest
+  Pizza <|--PizzaCheeseStyleStrasbourg
+  PizzaFactory <|-- PizzaFactoryBrest
+  PizzaFactory <|-- PizzaFactoryStrasbourg
+  Pizza <|-- PizzaGrecqueStyleBrest
+  Pizza <|-- PizzaGrecqueStyleStrasbourg
+  Pizza <|-- PizzaPoivronStyleBrest
+  Pizza <|-- PizzaPoivronStyleStrasbourg
   Pizzeria -->"1" PizzaFactory : factory
-  PizzeriaBrest -up-|> Pizzeria
-  PizzeriaStrasbourg -up-|> Pizzeria
+  Pizzeria <|-- PizzeriaBrest
+  Pizzeria <|-- PizzeriaStrasbourg
 
 
 
