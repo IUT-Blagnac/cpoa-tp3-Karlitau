@@ -2,8 +2,7 @@
 
 title __JAVA's Class Diagram__\n
 
-
-    abstract class Pizza {
+abstract class Pizza {
         ~ garnitures : ArrayList
         ~ nom : String
         ~ pate : String
@@ -15,37 +14,25 @@ title __JAVA's Class Diagram__\n
         + preparer()
     }
 
-
-
     class PizzaCheeseStyleBrest {
         + PizzaCheeseStyleBrest()
-        + couper()
-        + cuire()
-        + emballer()
-        + getNom()
-        + preparer()
     }
 
-
+  
 
 
     class PizzaCheeseStyleStrasbourg {
         + PizzaCheeseStyleStrasbourg()
-        + couper()
-        + cuire()
-        + emballer()
-        + getNom()
-        + preparer()
     }
 
-
+  
 
 
     abstract class PizzaFactory {
         {abstract} + create()
     }
 
-
+  
 
 
     class PizzaFactoryBrest {
@@ -54,7 +41,7 @@ title __JAVA's Class Diagram__\n
         {static} + getInstance()
     }
 
-
+  
 
 
     class PizzaFactoryStrasbourg {
@@ -63,43 +50,22 @@ title __JAVA's Class Diagram__\n
         {static} + getInstance()
     }
 
-
+  
 
 
     class PizzaGrecqueStyleBrest {
-        + PizzaGrecqueStyleBrest()
-        + couper()
-        + cuire()
-        + emballer()
-        + getNom()
-        + preparer()
     }
 
-
+  
 
 
     class PizzaGrecqueStyleStrasbourg {
-        + PizzaGrecqueStyleStrasbourg()
-        + couper()
-        + cuire()
-        + emballer()
-        + getNom()
-        + preparer()
     }
 
-
-
+  
 
     class PizzaPoivronStyleBrest {
-        + PizzaPoivronStyleBrest()
-        + couper()
-        + cuire()
-        + emballer()
-        + getNom()
-        + preparer()
     }
-
-
 
 
     class PizzaPoivronStyleStrasbourg {
@@ -111,15 +77,14 @@ title __JAVA's Class Diagram__\n
         + preparer()
     }
 
-
+  
 
 
     class PizzaTestDrive {
         {static} + main()
     }
 
-
-
+  
 
     abstract class Pizzeria {
         + Pizzeria()
@@ -127,15 +92,14 @@ title __JAVA's Class Diagram__\n
         {abstract} + createPizza()
     }
 
-
+  
 
 
     class PizzeriaBrest {
         + PizzeriaBrest()
         + createPizza()
     }
-
-
+  
 
 
     class PizzeriaFactory {
@@ -145,7 +109,7 @@ title __JAVA's Class Diagram__\n
         {static} + getInstance()
     }
 
-
+  
 
 
     class PizzeriaStrasbourg {
@@ -153,7 +117,7 @@ title __JAVA's Class Diagram__\n
         + createPizza()
     }
 
-
+  
 
   PizzaCheeseStyleBrest -up-|> Pizza
   PizzaCheeseStyleStrasbourg -up-|> Pizza
@@ -166,11 +130,6 @@ title __JAVA's Class Diagram__\n
   Pizzeria o-- PizzaFactory : factory
   PizzeriaBrest -up-|> Pizzeria
   PizzeriaStrasbourg -up-|> Pizzeria
-  Pizzeria ..> Pizza
-  PizzaFactory ..> Pizza
-  PizzeriaFactory ..> Pizzeria
-  PizzaTestDrive ..> PizzeriaFactory
-  PizzaTestDrive ..> Pizza
 
 
 right footer
